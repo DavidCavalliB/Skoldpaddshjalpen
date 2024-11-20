@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="css/kontakt.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+</head>
+<body>
+    
+    <header>
+        <a href="index.html" class="title">Sköldpaddshjälpen</a>
+        <img src="images/whitehome.png" class="menu-btn"></img>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="index.html">Hem</a>
+                <a href="galleri.html">Galleri</a>
+                <a href="kontakt.html">Kontakt</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="home">
+        <img src="images/david-troeger-M8xxVih_V_U-unsplash.jpg" alt="" class="image">
+        <div class="content">
+            <h1><span>Kontakt</span></h1>
+            <p>Även fast man kanske inte tänker på det så bidrar alla världens sköldpaddor väsentligt till vårt ekosystem. Därför så är det viktigt att vi tar hand om dem.<br><br>
+            Gmail:<br>
+            skoldpaddshjalpen@gmail.com</p>
+        </div>
+    </section>
+
+    <script type="text/javascript">
+        //För menyn uppe i hörnet
+        const menuBtn = document.querySelector(".menu-btn");
+        const navigation = document.querySelector(".navigation");
+    
+        menuBtn.addEventListener("click", () => {
+          menuBtn.classList.toggle("active");
+          navigation.classList.toggle("active");
+        });
+    </script>
+
+</body>
+</html>

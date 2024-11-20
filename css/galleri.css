@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+header{
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 100px;
+    transition: 0.5s ease;
+}
+
+header .title{
+    color: #ffff;
+    font-size: 1.8em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+  
+header .navigation{
+    position: relative;
+}
+  
+header .navigation .navigation-items a{
+    position: relative;
+    color: rgb(255, 255, 255);
+    font-size: 1.1em;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s ease;
+}
+  
+/* Linjen under */
+header .navigation .navigation-items a:before{
+    content: '';
+    position: absolute;
+    background: #db793c;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s ease;
+}
+  
+header .navigation .navigation-items a:hover:before{
+    width: 100%;
+}
+
+.main{
+    height: 100vh;
+    width: 100%;
+
+}
+
+.wrapper,
+ .slide{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide{
+    overflow: hidden;
+}
+
+.slide::before{
+    content: "";
+    position:  absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+    z-index: 10;
+}
+
+.slide .image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide .image-data{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    z-index: 100;
+}
+
+.image-data span.text{
+    font-size: 37px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.image-data h2{
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+}
+
+a.button{
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 25px;
+    color: #333;
+    background: #fff;
+    text-decoration: none;
+    margin-top: 25px;
+    transition: all 0.3s ease;
+}
+
+a.button:hover{
+    color: #fff;
+    background-color: #db793c;
+}
+
+/* knapparna på sidan */
+.nav-btn{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.nav-btn:hover{
+    background: rgba(255, 255, 255, 0.45);
+    transition: all 0.3s ease;
+}
+
+.swiper-button-next{
+    right: 50px;
+}
+
+.swiper-button-prev{
+    left: 50px;
+}
+
+.nav-btn::before,
+.nav-btn::after{
+    font-size: 35px;
+    color: #db793c;
+}
+
+/* Prickarna längst ner */
+.swiper-pagination-bullet{
+    opacity: 1;
+    height: 12px;
+    width: 12px;
+    background-color: #fff;
+}
+
+.swiper-pagination-bullet-active{
+    border: 2px solid #fff;
+    background-color: #db793c;
+}
+
+.menu-btn{
+    width: 0;
+    height: 0;
+}
+
+@media screen and (max-width:1160px) {
+
+    .nav-btn{
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 1040px){
+    header {
+        padding: 12px 20px;
+    }
+
+    header .title{
+        font-size: 1.34em;
+    }
+
+    section{
+        padding: 100px 20px;
+    }
+
+    header .navigation{
+        display: none;
+    }
+
+    header .navigation.active{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(1, 1, 1, 0.5);
+    }
+
+    header .navigation .navigation-items a{
+        color: #222;
+        font-size: 1.2em;
+        margin: 20px;
+    }
+
+    header .navigation .navigation-items a:before{
+        background: #222;
+        height: 5px;
+    }
+
+    header .navigation.active .navigation-items{
+        background: #db793c;
+        width: 600px;
+        max-width: 600px;
+        margin: 20px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 5px;
+    }
+
+    .menu-btn{
+        background-size: 30px;
+        background-position: center;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+
+    .menu-btn.active{
+        z-index: 999;
+    }
+
+}

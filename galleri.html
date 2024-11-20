@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galleri</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/galleri.css">
+</head>
+<body>
+    
+    <header>
+        <a href="index.html" class="title">Sköldpaddshjälpen</a>
+        <img src="images/whitehome.png" class="menu-btn"></img>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="index.html">Hem</a>
+                <a href="galleri.html">Galleri</a>
+                <a href="kontakt.html">Kontakt</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="main swiper mySwiper">
+        <div class="wrapper swiper-wrapper">
+
+            <!-- Första bilden -->
+            <div class="slide swiper-slide">
+               <img src="images/shafiqul-islam-ZuLqgvdFzKQ-unsplash.jpg" alt="" class="image">
+               <div class="image-data">
+                <span class="text">Stjärnsköldpaddor</span>
+                <h2>
+                    <br>
+                    Stjärnsköldpaddan, som många andra arter har ett väldigt<br>
+                    utmärkande och elegant mönster på ryggskölden. Förutom att mönstret är snyggt så<br>
+                    fungerar det bra som kamouflage i artens naturliga miljö. Sköldpaddorna<br>
+                    blir medelstora och lever relativt länge. 
+                </h2>
+                <a href="https://sv.wikipedia.org/wiki/Indisk_stj%C3%A4rnsk%C3%B6ldpadda" class="button" target="_blank">Läs mer</a>
+               </div>
+            </div>
+
+            <!-- Andra bilden -->
+            <div class="slide swiper-slide">
+                <img src="images/marcus-dietachmair-c5vUnvLe8pE-unsplash.jpg" alt="" class="image">
+                <div class="image-data">
+                 <span class="text">Grekiska <br> landsköldpaddor</span>
+                 <h2>
+                    <br>
+                    Grekiska landsköldpaddor är små till medelstora <br>
+                    sköldpaddor som finns i södra Europa. De är väldigt vanliga husdjur. <br>
+                    Hanarna är oftast mindre än vad honorna är. <br>
+                 </h2>
+                 <a href="https://sv.wikipedia.org/wiki/Grekisk_landsk%C3%B6ldpadda" class="button" target="_blank">Läs mer</a>
+                </div>
+             </div>
+
+             <!-- Tredje bilden -->
+             <div class="slide swiper-slide">
+                <img src="images/pexels-jonny-lew-1264060.jpg" alt="" class="image">
+                <div class="image-data">
+                 <span class="text">Rödfotade <br> Sköldpaddor</span>
+                 <h2>
+                    <br>
+                    Storleken på den rödfotade sköldpaddan kan variera väldigt mycket <br>
+                    beroende på var den kommer ifrån. Det finns brasilianska, colombanska, nordiska osv. <br>
+                    Sköldpaddorna har ett väldigt fint rött mönster och är väldigt uthålliga. <br>
+                 </h2>
+                 <a href="https://sv.wikipedia.org/wiki/R%C3%B6dfotad_skogssk%C3%B6ldpadda" class="button" target="_blank">Läs mer</a>
+                </div>
+             </div>
+
+             <!-- Fjärde bilden -->
+             <div class="slide swiper-slide">
+                <img src="images/dusan-veverkolog-_NgSXe2cJPk-unsplash.jpg" alt="" class="image">
+                <div class="image-data">
+                 <span class="text">Aldabra <br> Sköldpaddor</span>
+                 <h2>
+                    <br>
+                    Aldabrasköldpaddan kan bli väldigt stor. Vissa blir uppåt 120 <br>
+                    centimeter långa. Arten kan också bli väldigt gammal, uppåt 200 år. De flesta <br>
+                    aldabrasköldpaddor lever i Seychellerna på sin egen ö.  <br>
+                 </h2>
+                 <a href="https://sv.wikipedia.org/wiki/Aldabrask%C3%B6ldpadda" class="button" target="_blank">Läs mer</a>
+                </div>
+             </div>
+
+             <!-- Femte bilden -->
+             <div class="slide swiper-slide">
+                <img src="images/pexels-kiekie-&-kie-8058293.jpg" alt="" class="image">
+                <div class="image-data">
+                 <span class="text">Leopardsköldpaddor</span>
+                 <h2>
+                    <br>
+                    Leopardsköldpaddor förekommer oftast på savannen i östra och <br>
+                    södra Afrika. Arten har ett väldigt fint "prickigt" mönster på sitt skal. <br>
+                    De flesta leopardsköldpaddor blir ungefär 32 centimeter långa. <br>
+                 </h2>
+                 <a href="https://sv.wikipedia.org/wiki/Leopardsk%C3%B6ldpadda" class="button" target="_blank">Läs mer</a>
+                </div>
+             </div>
+        </div>
+
+        <div class="swiper-button-next nav-btn"></div>
+        <div class="swiper-button-prev nav-btn"></div>
+        <div class="swiper-pagination"></div>
+    </section>
+
+    <!-- Swiper JS -->
+    <script src="JS/swiper-bundle.min.js"></script>
+
+
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+
+    </script>
+
+
+    <script type="text/javascript">
+        //För menyn uppe i hörnet
+        const menuBtn = document.querySelector(".menu-btn");
+        const navigation = document.querySelector(".navigation");
+    
+        menuBtn.addEventListener("click", () => {
+          menuBtn.classList.toggle("active");
+          navigation.classList.toggle("active");
+        });
+    </script>
+
+</body>
+</html>
